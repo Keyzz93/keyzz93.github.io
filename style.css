@@ -1,5 +1,4 @@
-/* style.css */
-
+/* --- GLOBAL --- */
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
@@ -17,11 +16,13 @@ canvas#bg {
   z-index: -1;
 }
 
+/* --- NAVIGATION --- */
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 18px 28px;
+  backdrop-filter: blur(6px);
 }
 
 nav ul {
@@ -38,7 +39,7 @@ nav a {
 }
 
 nav a:hover {
-  color: #66e0ff;
+  color: #00ff94;
 }
 
 .logo {
@@ -46,6 +47,7 @@ nav a:hover {
   font-size: 22px;
 }
 
+/* --- HERO --- */
 .hero {
   text-align: center;
   margin-top: 120px;
@@ -53,21 +55,20 @@ nav a:hover {
 }
 
 .hero h2 {
-  font-size: 42px;
-  margin-bottom: 16px;
+  font-size: 36px;
+  margin-bottom: 12px;
 }
 
 .hero p {
   font-size: 18px;
-  max-width: 600px;
-  margin: auto;
 }
 
+/* --- BOUTONS --- */
 .btn {
   display: inline-block;
   margin-top: 20px;
   padding: 10px 20px;
-  background: linear-gradient(90deg, #ff4fff, #66e0ff);
+  background: linear-gradient(90deg,#ff4fff,#66e0ff,#00ff94);
   border-radius: 8px;
   text-decoration: none;
   color: #050505;
@@ -78,9 +79,10 @@ nav a:hover {
 
 .btn:hover {
   transform: translateY(-4px);
-  box-shadow: 0 10px 25px rgba(102,224,255,0.2);
+  box-shadow: 0 12px 30px rgba(102,224,255,0.2);
 }
 
+/* --- CARTES --- */
 .cards {
   display: flex;
   justify-content: center;
@@ -103,6 +105,7 @@ nav a:hover {
   box-shadow: 0 12px 30px rgba(102,224,255,0.08);
 }
 
+/* --- CONTENU --- */
 .content {
   max-width: 900px;
   margin: 80px auto;
@@ -111,27 +114,41 @@ nav a:hover {
   border-radius: 12px;
 }
 
-.code {
-  background: rgba(0,0,0,0.5);
-  padding: 12px;
-  border-radius: 8px;
-  overflow-x: auto;
+.content h2 {
+  font-size: 28px;
+  margin-bottom: 16px;
 }
 
-.fake-form {
+.content p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* --- FORMULAIRE --- */
+form#contactForm {
   display: flex;
   flex-direction: column;
   gap: 12px;
   max-width: 500px;
+  margin-top: 20px;
 }
 
-.fake-form input,
-.fake-form textarea {
+form#contactForm input,
+form#contactForm textarea {
   padding: 10px;
   border-radius: 8px;
   border: none;
+  font-size: 14px;
+  background: rgba(255,255,255,0.05);
+  color: white;
 }
 
+form#contactForm input::placeholder,
+form#contactForm textarea::placeholder {
+  color: #aaa;
+}
+
+/* --- CREDITS --- */
 .credit {
   position: fixed;
   right: 18px;
@@ -156,9 +173,18 @@ nav a:hover {
   100% { background-position: 0% 50%; }
 }
 
+/* --- NAVIGATION DES ETAPES --- */
 .nav-step {
   display: flex;
   gap: 12px;
   justify-content: center;
   margin-top: 30px;
+}
+
+/* --- CODE --- */
+.code {
+  background: rgba(0,0,0,0.5);
+  padding: 12px;
+  border-radius: 8px;
+  overflow-x: auto;
 }
