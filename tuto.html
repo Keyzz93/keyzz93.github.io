@@ -3,196 +3,84 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Tutoriel complet — Créer un site</title>
+  <title>Tutoriel — Créer un site web</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <canvas id="bg"></canvas>
 
   <header class="site-header">
     <div class="container">
-      <div class="brand">Tutoriel — Haytam</div>
-      <nav class="nav">
+      <div class="brand">Haytam</div>
+      <nav>
         <a href="index.html">Accueil</a>
         <a href="tuto.html">Tutoriel</a>
       </nav>
     </div>
   </header>
 
-  <main class="content container">
-    <h1>Créer un site web — guide pas à pas</h1>
-    <p class="lead">Ce document t'explique exactement quoi dire et quoi montrer pendant ton exposé. Chaque étape contient : explication simple, exemples, et points à présenter.</p>
+  <main class="container tutorial">
 
-    <!-- ETAPE 1 -->
-    <section id="step-1">
-      <h2>Étape 1 — Idée & plan (ce que tu dois dire)</h2>
-      <p><strong>Pourquoi ?</strong> Expliquer l'objectif du site — sans objectif clair, le site n'a pas de direction. Montre un croquis (dessin rapide) : c'est très parlant pour l'auditoire.</p>
+    <h1>Tutoriel complet : comment créer un site web</h1>
+    <p class="intro">
+      Voici toutes les étapes pour comprendre comment un site est créé.
+      Tu vas voir : c’est simple quand c’est bien expliqué.
+    </p>
 
-      <h3>Points à aborder à l'oral</h3>
-      <ul>
-        <li>Quel est le but : (ex : portfolio pour montrer mes projets / blog pour partager / page d'association)</li>
-        <li>Quels visiteurs ? (amis / recruteurs / fans d'anime)</li>
-        <li>Quelles pages : Accueil, À propos, Tutoriel, Projets, Contact</li>
-        <li>Wireframe : header (menu), zone principale, footer</li>
-        <li>Choix stylistiques : palette, police, ambiance</li>
-      </ul>
+    <h2>Étape 1 — Comprendre les trois langages du web</h2>
+    <p>
+      Avant de créer ton site, tu dois comprendre les 3 langages utilisés partout :
+    </p>
+    <ul>
+      <li><strong>HTML</strong> → le squelette du site (titre, texte, boutons…)</li>
+      <li><strong>CSS</strong> → le style (couleurs, centré, tailles…)</li>
+      <li><strong>JavaScript</strong> → les animations & interactions</li>
+    </ul>
 
-      <h3>Phrase prête à dire</h3>
-      <blockquote>« J'ai choisi de créer un site pour présenter mes projets : il y aura une page d’accueil, une page tutoriel, une page projets, et un footer avec mes crédits. »</blockquote>
+    <h2>Étape 2 — Créer les fichiers du site</h2>
+    <p>Dans ton dossier, crée trois fichiers :</p>
+    <ul>
+      <li><code>index.html</code></li>
+      <li><code>style.css</code></li>
+      <li><code>script.js</code></li>
+    </ul>
 
-      <h3>Exercice rapide (sur scène)</h3>
-      <p>Demande au public : « Si je devais ajouter une page, laquelle ? » — note les réponses et explique pourquoi tu choisis ou non.</p>
-    </section>
+    <h2>Étape 3 — Remplir le HTML</h2>
+    <p>
+      Le HTML sert juste à afficher du contenu.  
+      Par exemple :
+    </p>
 
-    <!-- ETAPE 2 -->
-    <section id="step-2">
-      <h2>Étape 2 — HTML : structure & sémantique</h2>
-      <p><strong>But :</strong> montrer que HTML n'est pas du style, mais la structure. C'est le squelette.</p>
+<pre><code>&lt;h1&gt;Bienvenue&lt;/h1&gt;
+&lt;p&gt;Ceci est mon site.&lt;/p&gt;</code></pre>
 
-      <h3>Code simple (montrer à l'écran)</h3>
-      <pre class="code">
-&lt;!DOCTYPE html&gt;
-&lt;html lang="fr"&gt;
-&lt;head&gt;
-  &lt;meta charset="utf-8"&gt;
-  &lt;title&gt;Mon site&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;header&gt;Menu / logo&lt;/header&gt;
-  &lt;main&gt;
-    &lt;section&gt;Accueil&lt;/section&gt;
-    &lt;section&gt;Projets&lt;/section&gt;
-  &lt;/main&gt;
-  &lt;footer&gt;Crédits&lt;/footer&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-      </pre>
+    <h2>Étape 4 — Ajouter du style avec CSS</h2>
+    <p>Le CSS rend ton site beau :</p>
 
-      <h3>Points à expliquer</h3>
-      <ul>
-        <li><code>&lt;head&gt;</code> : meta, titre, liens CSS — sert aux navigateurs et moteurs de recherche.</li>
-        <li><code>&lt;header&gt;</code> et <code>&lt;footer&gt;</code> : zones standards, utiles pour l’accessibilité.</li>
-        <li>Utiliser des balises sémantiques aide le référencement (SEO) et l’accessibilité.</li>
-      </ul>
+<pre><code>body {
+  background: black;
+  color: white;
+  font-family: Arial;
+}</code></pre>
 
-      <h3>À montrer en live</h3>
-      <p>Ouvre un simple fichier HTML dans ton navigateur : montre que sans CSS c’est brut mais lisible — c’est pourquoi on ajoute ensuite du CSS.</p>
-    </section>
+    <h2>Étape 5 — Ajouter des animations avec JavaScript</h2>
+    <p>
+      JavaScript permet d’ajouter des effets comme le fond animé de ce site :
+    </p>
 
-    <!-- ETAPE 3 -->
-    <section id="step-3">
-      <h2>Étape 3 — CSS : mise en forme, grilles et responsive</h2>
-      <p><strong>But :</strong> rendre le site agréable visuellement et lisible sur téléphone et PC.</p>
+<pre><code>console.log("Bienvenue sur mon site !");</code></pre>
 
-      <h3>Exemples concrets</h3>
-      <pre class="code">
-/* police, fond et couleur */
-body {
-  font-family: 'Poppins', sans-serif;
-  background: #06060a;
-  color: #fff;
-}
-/* layout */
-.container { max-width: 1000px; margin: 0 auto; padding: 20px; }
-      </pre>
+    <h2>Étape 6 — Mettre ton site en ligne</h2>
+    <p>
+      Tu peux utiliser GitHub Pages : gratuit, rapide et simple.  
+      Il suffit d’envoyer tes fichiers et d’activer “Pages”.
+    </p>
 
-      <h3>Points à expliquer</h3>
-      <ul>
-        <li>Palette : 2-3 couleurs → cohérence visuelle</li>
-        <li>Spacing (padding/margin) : respirer le contenu</li>
-        <li>Responsive : media queries — montre le même site sur petit écran</li>
-        <li>Transitions/hover : petites animations pour rendre interactif</li>
-      </ul>
-
-      <h3>Démo pour l’exposé</h3>
-      <p>Montre « avant/après » : même HTML, sans CSS puis avec CSS. Le contraste fait son effet.</p>
-    </section>
-
-    <!-- ETAPE 4 -->
-    <section id="step-4">
-      <h2>Étape 4 — JavaScript : interactions utiles</h2>
-      <p>JS ajoute le dynamisme : validation formulaire, menu mobile, animations.</p>
-
-      <h3>Exemple simple à montrer</h3>
-      <pre class="code">
-document.querySelector('.btn').addEventListener('click', function() {
-  alert('Bienvenue dans mon tutoriel !');
-});
-      </pre>
-
-      <h3>Points à expliquer</h3>
-      <ul>
-        <li>Event listeners (clics, scroll)</li>
-        <li>Manipulation du DOM (changer le HTML/CSS depuis JS)</li>
-        <li>Ne pas abuser : garder les interactions utiles</li>
-      </ul>
-
-      <h3>Mini-démo</h3>
-      <p>Affiche un bouton et fais une alerte, puis montre comment remplacer l'alerte par une animation douce.</p>
-    </section>
-
-    <!-- ETAPE 5 -->
-    <section id="step-5">
-      <h2>Étape 5 — Publier ton site (mise en ligne)</h2>
-      <p>Tu peux publier gratuitement un site statique (HTML/CSS/JS). Pour ton exposé, montre la page en local, puis la version en ligne.</p>
-
-      <h3>Processus simple (à dire)</h3>
-      <ol>
-        <li>Créer un dépôt GitHub.</li>
-        <li>Ajouter les fichiers (index.html, style.css, script.js, tuto.html).</li>
-        <li>Activer GitHub Pages (Settings → Pages → main branch → root).</li>
-        <li>Accéder à ton site : <code>https://tonpseudo.github.io/</code></li>
-      </ol>
-
-      <h3>Astuce exposé</h3>
-      <p>Montre une capture « avant/après » : modifications locales → push → site mis à jour.</p>
-    </section>
-
-    <!-- ETAPE 6 -->
-    <section id="step-6">
-      <h2>Étape 6 — Améliorer : SEO, performances, accessibilité</h2>
-      <ul>
-        <li>Optimise les images (WebP, compression).</li>
-        <li>Ajoute des titres et meta description pour le référencement.</li>
-        <li>Vérifie le contraste et les attributs <code>alt</code> pour l’accessibilité.</li>
-        <li>Testes la vitesse (GTmetrix ou Lighthouse) et corrige les points faibles.</li>
-      </ul>
-
-      <h3>Conclusion prête à dire</h3>
-      <blockquote>« Créer un site, c’est une combinaison d’idée, d’organisation, d’un squelette HTML, d’un beau style CSS, et d’un JS qui rend le tout vivant. »</blockquote>
-
-      <h3>Questions fréquentes à préparer</h3>
-      <ul>
-        <li>Comment choisir un nom de domaine ?</li>
-        <li>Quelle différence entre hébergement gratuit et payant ?</li>
-        <li>Comment rendre le site mobile friendly ?</li>
-      </ul>
-    </section>
-
-    <section class="checklist">
-      <h2>Checklist pour ton exposé (copie/colle dans tes notes)</h2>
-      <ol>
-        <li>Présenter l’objectif du site et le public visé.</li>
-        <li>Montrer le wireframe (croquis).</li>
-        <li>Expliquer la structure HTML.</li>
-        <li>Afficher le « avant/après » CSS.</li>
-        <li>Faire une petite démo JS (bouton ou fond animé).</li>
-        <li>Montrer la version en ligne (GitHub Pages).</li>
-        <li>Répondre aux Q/A préparées.</li>
-      </ol>
-    </section>
   </main>
 
-  <footer class="footer" id="credits">
-    <div class="container">
-      <div>Réalisé par Haytam</div>
-      <div>Dédicace à Madame Duchâteau</div>
-    </div>
-  </footer>
-
-  <div class="badge-credit">Réalisé par Haytam — dédicace à Madame Duchâteau</div>
+  <footer class="credit">Réalisé par Haytam — Dédicace à Madame Duchateau</footer>
 
   <script src="script.js"></script>
 </body>
 </html>
-
