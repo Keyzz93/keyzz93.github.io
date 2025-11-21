@@ -1,86 +1,93 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Tutoriel — Créer un site web</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <title>Tutoriel : Comment créer un site web</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-  <canvas id="bg"></canvas>
+<body class="tuto-body">
 
-  <header class="site-header">
-    <div class="container">
-      <div class="brand">Haytam</div>
-      <nav>
-        <a href="index.html">Accueil</a>
-        <a href="tuto.html">Tutoriel</a>
-      </nav>
-    </div>
-  </header>
+<div class="tuto-container">
 
-  <main class="container tutorial">
+    <h1>Comment créer un site web – Tutoriel simple et complet</h1>
+    <p>Réalisé par Haytam – Dédié à Madame Duchâteau</p>
 
-    <h1>Tutoriel complet : comment créer un site web</h1>
-    <p class="intro">
-      Voici toutes les étapes pour comprendre comment un site est créé.
-      Tu vas voir : c’est simple quand c’est bien expliqué.
-    </p>
-
-    <h2>Étape 1 — Comprendre les trois langages du web</h2>
+    <h2>Étape 1 : Créer un dossier pour ton site</h2>
     <p>
-      Avant de créer ton site, tu dois comprendre les 3 langages utilisés partout :
+        Avant de commencer, tu dois créer un endroit où tu vas mettre tous les fichiers de ton site.  
+        Voici comment faire :
     </p>
     <ul>
-      <li><strong>HTML</strong> → le squelette du site (titre, texte, boutons…)</li>
-      <li><strong>CSS</strong> → le style (couleurs, centré, tailles…)</li>
-      <li><strong>JavaScript</strong> → les animations & interactions</li>
+        <li>Va sur ton Bureau.</li>
+        <li>Fais un clic droit → <b>Nouveau</b> → <b>Dossier</b>.</li>
+        <li>Donne un nom au dossier, par exemple : <b>MonSite</b>.</li>
+        <li>Ce dossier contiendra toutes les pages et images de ton site.</li>
     </ul>
 
-    <h2>Étape 2 — Créer les fichiers du site</h2>
-    <p>Dans ton dossier, crée trois fichiers :</p>
+    <h2>Étape 2 : Créer la page principale (index.html)</h2>
+    <p>
+        Maintenant que ton dossier est prêt, tu vas créer ton premier fichier.  
+        C’est la page la plus importante : <b>index.html</b>.
+    </p>
     <ul>
-      <li><code>index.html</code></li>
-      <li><code>style.css</code></li>
-      <li><code>script.js</code></li>
+        <li>Ouvre le dossier <b>MonSite</b>.</li>
+        <li>Fais un clic droit → <b>Nouveau</b> → <b>Document texte</b>.</li>
+        <li>Renomme-le en <b>index.html</b>. (IMPORTANT : enlève le .txt)</li>
+        <li>Ouvre-le avec <b>Bloc-notes</b> ou <b>VS Code</b> si tu en as un.</li>
+    </ul>
+    <p>Tu peux maintenant y mettre du code HTML (comme celui que je t'ai donné pour ton site).</p>
+
+    <h2>Étape 3 : Comprendre ce qu’est HTML</h2>
+    <p>
+        HTML est un langage utilisé pour construire une page web.  
+        Il sert à placer le texte, les titres, les images, les boutons…  
+        C’est comme la structure d’une maison.
+    </p>
+    <p>Exemple d'une phrase en HTML :</p>
+    <pre>&lt;h1&gt;Bienvenue sur mon site&lt;/h1&gt;</pre>
+
+    <h2>Étape 4 : Ajouter du style avec un fichier CSS</h2>
+    <p>
+        Le CSS sert à rendre ton site beau : couleurs, ombres, fonds, tailles, etc.  
+        C’est la décoration de la maison.
+    </p>
+    <ul>
+        <li>Dans ton dossier <b>MonSite</b>, crée un nouveau fichier.</li>
+        <li>Appelle-le : <b>style.css</b>.</li>
+        <li>Tu mettras dedans toutes les couleurs et le style.</li>
     </ul>
 
-    <h2>Étape 3 — Remplir le HTML</h2>
+    <h2>Étape 5 : Ouvrir ton site pour le voir</h2>
     <p>
-      Le HTML sert juste à afficher du contenu.  
-      Par exemple :
+        Quand tes fichiers sont prêts :
+    </p>
+    <ul>
+        <li>Double-clique simplement sur le fichier <b>index.html</b>.</li>
+        <li>Ton navigateur (Chrome / Edge) ouvrira ton site.</li>
+        <li>Tu peux le modifier et recharger la page pour voir les changements.</li>
+    </ul>
+
+    <h2>Étape 6 : Mettre ton site en ligne (GitHub Pages)</h2>
+    <p>
+        Pour rendre ton site accessible à tout le monde :
+    </p>
+    <ol>
+        <li>Crée un compte sur GitHub.</li>
+        <li>Crée un nouveau dépôt (New Repository).</li>
+        <li>Mets tes fichiers dedans (index.html et style.css).</li>
+        <li>Va dans <b>Settings → Pages</b>.</li>
+        <li>Choisis “Deploy from branch”.</li>
+        <li>Ton site sera publié quelques minutes après.</li>
+    </ol>
+
+    <h2>Étape 7 : Test final</h2>
+    <p>
+        Quand tout marche, tu peux donner ton lien (ex : <b>tonpseudo.github.io</b>)  
+        pour que les gens voient ton site.
     </p>
 
-<pre><code>&lt;h1&gt;Bienvenue&lt;/h1&gt;
-&lt;p&gt;Ceci est mon site.&lt;/p&gt;</code></pre>
+</div>
 
-    <h2>Étape 4 — Ajouter du style avec CSS</h2>
-    <p>Le CSS rend ton site beau :</p>
-
-<pre><code>body {
-  background: black;
-  color: white;
-  font-family: Arial;
-}</code></pre>
-
-    <h2>Étape 5 — Ajouter des animations avec JavaScript</h2>
-    <p>
-      JavaScript permet d’ajouter des effets comme le fond animé de ce site :
-    </p>
-
-<pre><code>console.log("Bienvenue sur mon site !");</code></pre>
-
-    <h2>Étape 6 — Mettre ton site en ligne</h2>
-    <p>
-      Tu peux utiliser GitHub Pages : gratuit, rapide et simple.  
-      Il suffit d’envoyer tes fichiers et d’activer “Pages”.
-    </p>
-
-  </main>
-
-  <footer class="credit">Réalisé par Haytam — Dédicace à Madame Duchateau</footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
