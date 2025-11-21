@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tutoriel — Création de site</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="bg"></canvas>
+
+  <header>
+    <nav>
+      <h1 class="logo">Tutoriel</h1>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="tuto.html">Créer un site</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="content">
+    <!-- Étape 1 -->
+    <section class="step" id="step1">
+      <h2>Étape 1 — Idée & Planning</h2>
+      <p>Avant de coder, réfléchis à ton objectif, aux pages et à la structure générale.</p>
+      <ul>
+        <li>Quel est le but du site ?</li>
+        <li>Quelles pages inclure ?</li>
+        <li>Plan de la structure : header, sections, footer.</li>
+        <li>Choix esthétique : couleurs, polices, ambiance.</li>
+      </ul>
+      <div class="nav-step">
+        <button class="btn" onclick="showStep(2)">Suivant →</button>
+      </div>
+    </section>
+
+    <!-- Étape 2 -->
+    <section class="step" id="step2" style="display:none;">
+      <h2>Étape 2 — HTML : structure</h2>
+      <p>Le HTML définit la structure. Exemple :</p>
+      <pre class="code">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="fr"&gt;
+&lt;head&gt;...&lt;/head&gt;
+&lt;body&gt;...&lt;/body&gt;
+&lt;/html&gt;
+      </pre>
+      <div class="nav-step">
+        <button class="btn" onclick="showStep(1)">← Précédent</button>
+        <button class="btn" onclick="showStep(3)">Suivant →</button>
+      </div>
+    </section>
+
+    <!-- Étape 3 -->
+    <section class="step" id="step3" style="display:none;">
+      <h2>Étape 3 — CSS : style</h2>
+      <p>Le CSS rend le site beau et interactif :</p>
+      <pre class="code">
+body { font-family: Arial; background: #0a0a0a; color: white; }
+header { padding: 20px; }
+.card { background: rgba(255,255,255,0.05); padding: 20px; border-radius: 10px; }
+      </pre>
+      <div class="nav-step">
+        <button class="btn" onclick="showStep(2)">← Précédent</button>
+        <button class="btn" onclick="showStep(4)">Suivant →</button>
+      </div>
+    </section>
+
+    <!-- Étape 4 -->
+    <section class="step" id="step4" style="display:none;">
+      <h2>Étape 4 — JavaScript : dynamisme</h2>
+      <p>Le JS permet animations, clics et formulaires :</p>
+      <pre class="code">
+document.querySelector('.btn').addEventListener('click', () =&gt; {
+  alert('Bienvenue !');
+});
+      </pre>
+      <div class="nav-step">
+        <button class="btn" onclick="showStep(3)">← Précédent</button>
+        <button class="btn" onclick="showStep(5)">Suivant →</button>
+      </div>
+    </section>
+
+    <!-- Étape 5 -->
+    <section class="step" id="step5" style="display:none;">
+      <h2>Étape 5 — Mise en ligne</h2>
+      <p>Héberge ton site :</p>
+      <ul>
+        <li>Gratuit : services comme GitHub Pages, Netlify.</li>
+        <li>Payant : nom de domaine personnalisé et plus de contrôle.</li>
+        <li>Test en local avant publication.</li>
+      </ul>
+      <div class="nav-step">
+        <button class="btn" onclick="showStep(4)">← Précédent</button>
+        <button class="btn" onclick="showStep(6)">Suivant →</button>
+      </div>
+    </section>
+
+    <!-- Étape 6 -->
+    <section class="step" id="step6" style="display:none;">
+      <h2>Étape 6 — Améliorer & publier</h2>
+      <ul>
+        <li>Optimisation des images.</li>
+        <li>SEO basique : titres, meta, mots-clés.</li>
+        <li>Accessibilité : alt images, contrastes.</li>
+        <li>Analytics pour suivre visiteurs.</li>
+        <li>Mises à jour régulières.</li>
+      </ul>
+      <p>Bravo, ton site est prêt ! Continue à pratiquer pour t’améliorer.</p>
+      <div class="nav-step">
+        <button class="btn" onclick="showStep(5)">← Précédent</button>
+        <a class="btn" href="index.html">Retour à l'accueil</a>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="credit">Réalisé par Haytam — dédicace à Madame du Château</div>
+
+  <script src="script.js"></script>
+  <script>
+    function showStep(n) {
+      const steps = document.querySelectorAll('.step');
+      steps.forEach(s => s.style.display = 'none');
+      document.getElementById('step' + n).style.display = 'block';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
