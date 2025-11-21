@@ -1,51 +1,48 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Créer ton Site Web - Style Anime/Gaming</title>
+  <title>Accueil</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
+  <canvas id="bg"></canvas>
 
-  <!-- Fond animé -->
-  <canvas id="particles"></canvas>
-
-  <!-- NAVBAR -->
-  <nav class="navbar">
-    <h1 class="logo">WEB⚡CREATOR</h1>
-    <ul>
-      <li><a href="index.html">Accueil</a></li>
-      <li><a href="page-tuto.html">Créer un site</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- HERO -->
-  <header class="hero">
-    <h2 class="title">Crée ton propre site web.</h2>
-    <p class="subtitle">Apprends à créer un site stylé — en 5 minutes.</p>
-    <a class="btn" href="page-tuto.html">Commencer</a>
+  <header>
+    <nav>
+      <h1 class="logo">Site Création</h1>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="tuto-step1.html">Créer un site</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <!-- CARTES -->
+  <section class="hero">
+    <h2>Bienvenue</h2>
+    <p>Découvre un guide complet étape par étape pour créer ton site web, avec un design stylé et des exemples prêts à l'emploi.</p>
+    <a class="btn" href="tuto-step1.html">Commencer</a>
+  </section>
+
   <section class="cards">
     <div class="card">
-      <h3>🔥 Super simple</h3>
-      <p>T’as juste à copier-coller et ton site est en ligne.</p>
+      <h3>Tutoriel complet</h3>
+      <p>Un guide qui t'accompagne de l'idée au site en ligne, page par page.</p>
     </div>
-
     <div class="card">
-      <h3>⚙️ Explications</h3>
-      <p>On t’explique comment faire un site de A à Z.</p>
+      <h3>Design</h3>
+      <p>Exemples de styles, animations et bonnes pratiques pour un rendu pro.</p>
+    </div>
+    <div class="card">
+      <h3>Rapide & gratuit</h3>
+      <p>Des solutions pour publier facilement sans dépenses.</p>
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2025 — Réalisé par keyzz93 avec GitHub Pages</p>
-  </footer>
+  <div class="credit">Réalisé par Haytam — dédicace à Madame du Château</div>
 
   <script src="script.js"></script>
 </body>
