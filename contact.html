@@ -14,34 +14,54 @@
       <h1 class="logo">Contact</h1>
       <ul>
         <li><a href="index.html">Accueil</a></li>
-        <li><a href="tuto-step1.html">Tutoriel</a></li>
+        <li><a href="tuto-step1.html">Créer un site</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <main class="content">
-    <h2>Contactez-nous</h2>
-    <form id="contactForm">
-      <label for="name">Nom :</label>
-      <input type="text" id="name" name="name" required />
+  <section class="content">
+    <h2>Contact</h2>
+    <p>Remplis le formulaire et ton client mail s’ouvrira avec ton message prêt à envoyer :</p>
 
-      <label for="email">Email :</label>
-      <input type="email" id="email" name="email" required />
+    <form id="contactForm">
+      <label for="name">Ton nom :</label>
+      <input type="text" id="name" placeholder="Ton nom" required />
+
+      <label for="email">Ton email :</label>
+      <input type="email" id="email" placeholder="Ton email" required />
 
       <label for="message">Message :</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
+      <textarea id="message" rows="5" placeholder="Ton message..." required></textarea>
 
       <button type="submit" class="btn">Envoyer</button>
     </form>
-    <p id="confirmation" style="display:none; color: lightgreen;">Message envoyé ! Merci 😊</p>
 
-    <div class="nav-step">
-      <a class="btn" href="index.html">Retour à l'accueil</a>
-    </div>
-  </main>
+    <p id="confirmation" style="display:none; color: #00ff94; margin-top: 12px; font-weight: bold;">Le client mail s’ouvre !</p>
+  </section>
 
   <div class="credit small">Réalisé par Haytam — dédicace à Madame du Château</div>
+
   <script src="script.js"></script>
+  <script>
+    const form = document.getElementById('contactForm');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+
+      const recipient = "tonmail@gmail.com"; // ← mets ton email ici
+
+      const mailtoLink = `mailto:${recipient}?subject=Message de ${encodeURIComponent(name)}&body=${encodeURIComponent("Email: " + email + "\n\n" + message)}`;
+
+      window.location.href = mailtoLink;
+
+      document.getElementById('confirmation').style.display = 'block';
+      form.reset();
+    });
+  </script>
 </body>
 </html>
