@@ -1,112 +1,90 @@
-/* ===== RESET ===== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* ====== STYLE GLOBAL ====== */
 body {
-  font-family: Arial, sans-serif;
-  color: #fff;
-  background: #0b0b0f;
-  overflow-x: hidden;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #0b0f24, #1b2758, #0a1a2b);
+    color: white;
 }
 
-/* ===== CONTAINER ===== */
-.container {
-  width: 90%;
-  max-width: 900px;
-  margin: auto;
+/* ====== HEADER ====== */
+header {
+    text-align: center;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-/* ===== HEADER ===== */
-.site-header {
-  padding: 15px 0;
-  backdrop-filter: blur(10px);
+h1 {
+    font-size: 40px;
+    margin: 0;
 }
-.site-header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+
+.sous-titre {
+    font-size: 15px;
+    opacity: 0.7;
 }
-.brand {
-  font-size: 22px;
-  font-weight: bold;
-  background: linear-gradient(45deg, #ff4fff, #66e0ff, #00ff94);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+
+/* ====== NAVIGATION ====== */
+nav {
+    margin-top: 15px;
 }
+
 nav a {
-  margin-left: 15px;
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
+    color: #82b9ff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 600;
+    transition: 0.2s;
 }
 
-/* ===== HERO ===== */
-.hero {
-  text-align: center;
-  padding: 100px 0 60px;
-}
-.hero h1 {
-  font-size: 40px;
-  margin-bottom: 15px;
-}
-.lead {
-  font-size: 18px;
-  opacity: 0.8;
-  margin-bottom: 25px;
-}
-.btn {
-  padding: 12px 25px;
-  background: #00b3ff;
-  border: none;
-  border-radius: 8px;
-  color: #fff;
-  cursor: pointer;
-  font-size: 16px;
+nav a:hover {
+    color: #ffffff;
 }
 
-/* ===== TUTORIAL ===== */
-.tutorial h1 {
-  text-align: center;
-  margin: 40px 0 10px;
-}
-.tutorial h2 {
-  margin-top: 30px;
-}
-.tutorial p, .tutorial ul {
-  margin: 10px 0;
-}
-pre {
-  background: #111;
-  padding: 10px;
-  border-radius: 6px;
-  margin: 10px 0;
-  overflow-x: auto;
+/* ====== ACCUEIL ====== */
+.intro, .carte {
+    width: 80%;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 25px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
 }
 
-/* ===== FOOTER ===== */
-.credit {
-  position: fixed;
-  right: 20px;
-  bottom: 15px;
-  font-size: 13px;
-  font-weight: bold;
-  background: linear-gradient(45deg, #ff00ff, #00ffff, #00ff88);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: colorShift 6s infinite alternate;
+h2, h3 {
+    color: #8ecbff;
 }
 
-@keyframes colorShift {
-  0% { filter: hue-rotate(0deg); }
-  100% { filter: hue-rotate(360deg); }
+/* ====== TUTO ====== */
+.tuto-body {
+    background: linear-gradient(135deg, #101929, #162b4d, #0f1538);
 }
 
-/* ===== BACKGROUND CANVAS ===== */
-canvas#bg {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  z-index: -1;
+.tuto-container {
+    width: 85%;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 12px;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+
+.tuto-container pre {
+    background: rgba(0,0,0,0.4);
+    padding: 10px;
+    border-radius: 6px;
+    overflow-x: auto;
+}
+
+/* ====== FOOTER ====== */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    opacity: 0.7;
 }
