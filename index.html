@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Accueil — Création de site</title>
+  <title>Mon site anime</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,35 +11,38 @@
 
   <header>
     <nav>
-      <h1 class="logo">Site Création</h1>
+      <h1 class="logo">Mon Site Anime</h1>
       <ul>
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="tuto-step1.html">Créer un site</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#tuto">Tutoriel</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <section class="hero">
-    <h2>Bienvenue sur ton guide pour créer un site !</h2>
-    <p>Découvre étape par étape comment créer ton site web avec un design stylé et des animations.</p>
-    <a class="btn" href="tuto-step1.html">Commencer le tutoriel</a>
-  </section>
+  <main class="content">
+    <section id="accueil">
+      <h2>Bienvenue !</h2>
+      <p>Ce site est dédié aux fans d'anime et à ceux qui veulent apprendre à créer un site web stylé.</p>
+    </section>
 
-  <section class="cards">
-    <div class="card">
-      <h3>Tutoriel complet</h3>
-      <p>Chaque étape expliquée, de l’idée au site en ligne.</p>
-    </div>
-    <div class="card">
-      <h3>Design futuriste</h3>
-      <p>Menus modernes, boutons flashy, fond animé et style pro.</p>
-    </div>
-    <div class="card">
-      <h3>Publication facile</h3>
-      <p>Apprends à mettre ton site en ligne sans stress.</p>
-    </div>
-  </section>
+    <section id="tuto">
+      <h2>Tutoriel : Comment créer un site web</h2>
+      <p>Suivez les étapes ci-dessous pour comprendre comment un site web fonctionne et comment le créer.</p>
+      <iframe src="tuto.html" width="100%" height="600" style="border:none;"></iframe>
+    </section>
+
+    <section id="contact">
+      <h2>Contactez-moi</h2>
+      <form id="contactForm">
+        <input type="text" name="name" placeholder="Votre nom" required>
+        <input type="email" name="email" placeholder="Votre email" required>
+        <textarea name="message" placeholder="Votre message" required></textarea>
+        <button type="submit">Envoyer</button>
+      </form>
+      <p id="msgConfirm" style="display:none; color: #0f0;">Message envoyé !</p>
+    </section>
+  </main>
 
   <div class="credit">Réalisé par Haytam — dédicace à Madame du Château</div>
 
