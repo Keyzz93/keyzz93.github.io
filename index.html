@@ -3,68 +3,50 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Créer un site — Exposé | Haytam</title>
+  <title>Créer un site web — Guide complet</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <canvas id="bg"></canvas>
 
   <header class="site-header">
     <div class="container">
-      <div class="brand">Haytam — Exposé</div>
-      <nav class="nav">
+      <div class="brand">Haytam</div>
+      <nav>
         <a href="index.html">Accueil</a>
         <a href="tuto.html">Tutoriel</a>
-        <a href="#credits">Crédits</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="hero container" id="home">
-      <h1>Comment créer un site web — guide complet</h1>
-      <p class="lead">Un exposé clair et visuel qui t'accompagne de l'idée à la mise en ligne. Design futuriste & animé.</p>
-      <div class="cta">
-        <a class="btn" href="tuto.html">Voir le tutoriel</a>
-      </div>
-      <ul class="features">
-        <li>Plan détaillé pour exposer</li>
-        <li>Exemples de code prêts à montrer</li>
-        <li>Design professionnel (sans contact)</li>
-      </ul>
+    <section class="hero container">
+      <h1>Créer un site web — Le guide complet</h1>
+      <p class="lead">
+        Découvre comment fonctionne un vrai site web : structure, langage,
+        design, scripts et mise en ligne. Tout expliqué simplement.
+      </p>
+
+      <button class="btn" onclick="location.href='tuto.html'">
+        Commencer le tutoriel
+      </button>
     </section>
 
-    <section class="preview container">
-      <h2>Résumé rapide</h2>
-      <div class="preview-grid">
-        <article class="preview-card">
-          <h3>Idée & Plan</h3>
-          <p>Définir l'objectif, les pages, et esquisser la structure avant de coder.</p>
-        </article>
-        <article class="preview-card">
-          <h3>HTML</h3>
-          <p>Structure sémantique et accessible : header, main, sections, footer.</p>
-        </article>
-        <article class="preview-card">
-          <h3>CSS</h3>
-          <p>Palette, typographie, mise en page responsive et animations simples.</p>
-        </article>
-        <article class="preview-card">
-          <h3>JS & Mise en ligne</h3>
-          <p>Interactivité basique et publication statique (GitHub Pages).</p>
-        </article>
-      </div>
+    <section class="container">
+      <h2>Qu’est-ce qu’un site web ?</h2>
+      <p>
+        Un site web est un ensemble de fichiers : une page (HTML), du style (CSS),
+        et parfois des animations (JavaScript). Ton navigateur les assemble
+        pour afficher une page comme celle que tu regardes en ce moment.
+      </p>
     </section>
+
   </main>
 
-  <footer id="credits">
-    <div class="container footer-inner">
-      <div class="left">Exposé réalisé par <strong>Haytam</strong></div>
-      <div class="right">Dédicace à Madame du Château</div>
-    </div>
+  <footer class="credit">
+    Réalisé par Haytam — Dédicace à Madame Duchateau
   </footer>
-
-  <div class="badge-credit">Réalisé par Haytam — dédicace à Madame du Château</div>
 
   <script src="script.js"></script>
 </body>
