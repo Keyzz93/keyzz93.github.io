@@ -2,122 +2,64 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tutoriel pour créer un site</title>
+  <title>Tutoriel création site web</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <canvas id="bg"></canvas>
-
-  <!-- Header / Menu -->
-  <header>
-    <nav>
-      <h1 class="logo">Tutoriel Site Web</h1>
-      <ul>
-        <li><a href="#etape1">Étape 1</a></li>
-        <li><a href="#etape2">Étape 2</a></li>
-        <li><a href="#etape3">Étape 3</a></li>
-        <li><a href="#etape4">Étape 4</a></li>
-        <li><a href="#etape5">Étape 5</a></li>
-        <li><a href="#etape6">Étape 6</a></li>
-      </ul>
-    </nav>
-  </header>
-
   <main class="content">
+    <h1>Tutoriel complet : créer un site web</h1>
 
-    <!-- Étape 1 -->
     <section id="etape1">
       <h2>Étape 1 — L’idée et le plan</h2>
-      <p>Avant de commencer, il est crucial de réfléchir à <strong>ce que tu veux faire</strong>. Sans plan, tu risques de perdre du temps et de te décourager.</p>
-      <ul>
-        <li><strong>But du site :</strong> montrer un portfolio, vendre un produit, partager un hobby ou blog.</li>
-        <li><strong>Pages :</strong> Accueil, À propos, Tutoriel, Projets, Contact.</li>
-        <li><strong>Structure :</strong> Header (menu), Sections, Footer.</li>
-        <li><strong>Esthétique :</strong> Palette de couleurs, ambiance (futuriste, gaming, anime…), polices.</li>
-        <li><strong>Checklist :</strong> écris au moins 5 éléments que tu veux montrer sur ton site.</li>
-      </ul>
-      <p>💡 Conseil exposé : montre un petit croquis ou une liste de ce que tu veux sur ton site.</p>
+      <p>Avant de coder, réfléchis à ce que tu veux faire. Définis le but, les pages et la structure.</p>
     </section>
 
-    <!-- Étape 2 -->
     <section id="etape2">
-      <h2>Étape 2 — HTML : le squelette du site</h2>
-      <p>Le HTML organise le contenu de ton site : titres, paragraphes, images, liens.</p>
-      <pre class="code">
-&lt;!DOCTYPE html&gt;
-&lt;html lang="fr"&gt;
-&lt;head&gt;
-  &lt;meta charset="UTF-8"&gt;
-  &lt;title&gt;Mon site&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;header&gt;Menu et logo&lt;/header&gt;
-  &lt;main&gt;
-    &lt;section&gt;Contenu principal&lt;/section&gt;
-  &lt;/main&gt;
-  &lt;footer&gt;Bas de page&lt;/footer&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+      <h2>Étape 2 — HTML : structure</h2>
+      <p>Le HTML organise ton site : titres, paragraphes, images, liens.</p>
+      <pre>
+&lt;header&gt;Menu&lt;/header&gt;
+&lt;main&gt;Contenu&lt;/main&gt;
+&lt;footer&gt;Bas de page&lt;/footer&gt;
       </pre>
-      <p>💡 Astuce exposé : explique chaque balise et montre la différence entre HTML seul et HTML + style.</p>
     </section>
 
-    <!-- Étape 3 -->
     <section id="etape3">
       <h2>Étape 3 — CSS : le style</h2>
-      <p>Le CSS rend ton site beau et agréable à lire. Il gère les couleurs, polices, marges, animations.</p>
-      <pre class="code">
-body { font-family: 'Poppins', sans-serif; background: #0a0a0a; color: white; }
+      <p>Le CSS rend ton site beau : couleurs, polices, marges, animations.</p>
+      <pre>
+body { background: #06060a; color: white; font-family: 'Poppins', sans-serif; }
 header { padding: 20px; background: rgba(255,255,255,0.05); }
-.card { background: rgba(255,255,255,0.1); padding: 20px; border-radius: 12px; transition: 0.3s; }
       </pre>
-      <p>💡 Astuce exposé : montre un avant/après CSS pour voir l’effet.</p>
     </section>
 
-    <!-- Étape 4 -->
     <section id="etape4">
-      <h2>Étape 4 — JavaScript : rendre le site vivant</h2>
-      <p>Le JavaScript permet d’animer, réagir aux clics, valider des formulaires et générer du contenu dynamique.</p>
-      <pre class="code">
+      <h2>Étape 4 — JavaScript : interactions</h2>
+      <p>Animations, clics et formulaires sont gérés avec JS.</p>
+      <pre>
 document.querySelector('.btn').addEventListener('click', function() {
-  alert('Bienvenue sur mon site !');
+  alert('Bonjour !');
 });
       </pre>
-      <p>💡 Astuce exposé : montre un bouton avant/après clic pour expliquer l’interaction.</p>
     </section>
 
-    <!-- Étape 5 -->
     <section id="etape5">
-      <h2>Étape 5 — Ajouter un formulaire de contact</h2>
-      <p>Permettre aux visiteurs de t’envoyer un message via un email :</p>
-      <pre class="code">
-&lt;form action="mailto:tonemail@gmail.com" method="post" enctype="text/plain"&gt;
-  &lt;input type="text" name="Nom" placeholder="Ton nom"&gt;
-  &lt;input type="email" name="Email" placeholder="Ton email"&gt;
-  &lt;textarea name="Message" placeholder="Ton message"&gt;&lt;/textarea&gt;
-  &lt;button type="submit"&gt;Envoyer&lt;/button&gt;
+      <h2>Étape 5 — Formulaire de contact</h2>
+      <p>Permet aux visiteurs de t’envoyer un message.</p>
+      <pre>
+&lt;form action="mailto:tonemail@gmail.com" method="post"&gt;
+  &lt;input type="text"&gt;
+  &lt;input type="email"&gt;
+  &lt;textarea&gt;&lt;/textarea&gt;
+  &lt;button&gt;Envoyer&lt;/button&gt;
 &lt;/form&gt;
       </pre>
-      <p>💡 Astuce exposé : teste le formulaire pour montrer comment le mail s’ouvre.</p>
     </section>
 
-    <!-- Étape 6 -->
     <section id="etape6">
-      <h2>Étape 6 — Mise en ligne et amélioration</h2>
-      <p>Il existe plusieurs façons de publier ton site :</p>
-      <ul>
-        <li><strong>Hébergement gratuit :</strong> GitHub Pages, Netlify, Vercel.</li>
-        <li><strong>Hébergement payant :</strong> Nom de domaine personnalisé, plus de contrôle.</li>
-        <li><strong>Optimisations :</strong> images compressées, SEO, accessibilité, analytics, contenu à jour.</li>
-      </ul>
-      <p>💡 Astuce exposé : montre la version locale et la version en ligne, explique les différences.</p>
+      <h2>Étape 6 — Mise en ligne</h2>
+      <p>Publie ton site sur GitHub Pages, Netlify ou un hébergeur payant.</p>
     </section>
-
   </main>
-
-  <div class="credit">Réalisé par Haytam — dédicace à Madame du Château</div>
-
-  <script src="script.js"></script>
 </body>
 </html>
