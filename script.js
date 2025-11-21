@@ -1,51 +1,51 @@
-// script.js
+// Script pour le bouton "alert" dans le tuto
+document.querySelectorAll('.btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    console.log('Bouton cliqué !');
+  });
+});
+
+// Formulaire contact
+const form = document.getElementById('contactForm');
+form?.addEventListener('submit', function(e){
+  e.preventDefault();
+  document.getElementById('confirmation').style.display = 'block';
+  form.reset();
+});
+
+// Animation canvas (fond dynamique)
 const canvas = document.getElementById('bg');
 const ctx = canvas.getContext('2d');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 
-function resize() {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-}
-window.addEventListener('resize', resize);
-resize();
-
-let particles = [];
-class Particle {
-  constructor() {
-    this.x = Math.random() * canvas.width;
-    this.y = Math.random() * canvas.height;
-    this.vx = (Math.random() - 0.5) * 0.8;
-    this.vy = (Math.random() - 0.5) * 0.8;
-    this.size = Math.random() * 2 + 1;
-    this.color = Math.random() > 0.5 ? '#ff4fff' : '#66e0ff';
-  }
-  update() {
-    this.x += this.vx;
-    this.y += this.vy;
-    if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
-    if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
-  }
-  draw() {
-    ctx.fillStyle = this.color;
-    ctx.shadowBlur = 10;
-    ctx.shadowColor = this.color;
-    ctx.beginPath();
-    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-    ctx.fill();
-  }
+let stars = [];
+for(let i = 0; i < 100; i++){
+  stars.push({
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height,
+    radius: Math.random() * 1.5,
+    speed: Math.random() * 0.5
+  });
 }
 
-function init() {
-  particles = [];
-  for (let i = 0; i < 160; i++) particles.push(new Particle());
-}
-
-function animate() {
+function animate(){
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  ctx.globalCompositeOperation = 'lighter';
-  particles.forEach(p => { p.update(); p.draw(); });
+  ctx.fillStyle = 'white';
+  stars.forEach(star => {
+    ctx.beginPath();
+    ctx.arc(star.x, star.y, star.radius, 0, Math.PI*2);
+    ctx.fill();
+    star.y += star.speed;
+    if(star.y > canvas.height) star.y = 0;
+  });
   requestAnimationFrame(animate);
 }
-
-init();
 animate();
+
+// Resize canvas automatiquement
+window.addEventListener('resize', () => {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+});
+
