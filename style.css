@@ -88,3 +88,15 @@ footer {
     margin-top: 40px;
     opacity: 0.7;
 }
+
+.special-tag {
+    background: linear-gradient(90deg, #5c00ff, #b700ff);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 12px;
+    display: inline-block;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 10px rgba(92, 0, 255, 0.4);
+}
+
