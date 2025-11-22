@@ -100,3 +100,32 @@ footer {
     box-shadow: 0 4px 10px rgba(92, 0, 255, 0.4);
 }
 
+.exemple-site {
+    margin-top: 40px;
+    padding: 20px;
+    background: #f3e8ff;
+    border-left: 5px solid #8b00ff;
+    border-radius: 10px;
+}
+
+.exemple-site h2 {
+    margin-top: 0;
+    color: #6a00ff;
+}
+
+.lien-site {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 18px;
+    background: linear-gradient(90deg, #6a00ff, #c400ff);
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.25s;
+}
+
+.lien-site:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(140, 0, 255, 0.4);
+}
